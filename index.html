@@ -143,6 +143,8 @@ btnMain.addEventListener('click', () => {
 // ─── 阶段 2：点击小 x → 切换到线路选择 ───
 closeSmall.addEventListener('click', () => {
   textArea.innerHTML = '請選擇網路<br><br>＊如果不能連結或不能截圖，請嘗試切換線路＊';
+  textArea.style.cursor = 'pointer';
+  textArea.onclick = () => { window.open('https://comic18j-yodo.me', '_blank'); };
   closeSmall.style.display = 'none';
   btnMain.style.display = 'none';
   lineBtns.forEach(b => b.style.display = 'block');
